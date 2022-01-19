@@ -1,0 +1,47 @@
+.bonusPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 15px;
+    row-gap: 15px;
+    margin-top: 25px;
+    &-item {
+      padding: 20px 20px 19px 20px;
+      background: linear-gradient(180deg, #C1C8F0 0%, #EAEDFA 100%);
+      border: 1px solid #FFFFFF;
+      border-radius: 10px;
+      font-family: Fredoka One;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 29px;
+      letter-spacing: 0em;
+      text-align: center;
+      color: #4D4D4D;
+      cursor: pointer;
+    }
+  }
+}
+
+.activeBonus {
+  background: linear-gradient(180deg, #FFD900 0%, #FFBB00 100%);
+  border: 1px solid #FFD900;
+}
+
+@media (max-width: 614px) {
+  .bonusPage {
+    &-container {
+      row-gap: 13px;
+      &-item {
+        width: 100%;
+        font-size: 20px;
+        line-height: 25px;
+      }
+    }
+  }
+}

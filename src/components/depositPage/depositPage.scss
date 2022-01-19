@@ -1,0 +1,149 @@
+.depositPage {
+
+  &-title {
+    max-width: 700px;
+  }
+
+  &-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &-info {
+      font-family: Fredoka One;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 22px;
+      letter-spacing: 0em;
+      text-align: center;
+      color: #FFFFFF;
+      text-transform: uppercase;
+      margin: 21px 0 19px 0;
+    }
+
+    &-filter {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      column-gap: 16px;
+      &-btn {
+        height: 59px;
+        width: 59px;
+        background: linear-gradient(180deg, #C1C8F0 0%, #EAEDFA 100%);
+        border: 1px solid #FFFFFF;
+        border-radius: 50%;
+        font-family: Fredoka One;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 17px;
+        letter-spacing: 0em;
+        text-align: center;
+        color: #959CC3;
+        cursor: pointer;
+
+        &:hover {
+          background: linear-gradient(180deg, #E7E9F7 0%, #FFFFFF 100%);
+          border: 1px solid #FFFFFF;
+        }
+      }
+      & input {
+        -webkit-appearance: none;
+        width: calc(100% - 150px);
+        height: 14px;
+        border-radius: 10px;
+        background: linear-gradient(89.79deg, #959CC3 -8.34%, #CED3EB 106.18%);
+        outline: none;
+        -webkit-transition: .2s;
+        -webkit-transform: rotateY(180deg);
+
+        &::-webkit-slider-thumb {
+          -webkit-appearance: none;
+          appearance: none;
+          width: 41px;
+          height: 41px;
+          border-radius: 50%;
+          background: radial-gradient(81.71% 81.71% at 40.24% 48.78%, #FFBB00 0%, #F3B200 100%);
+          cursor: pointer;
+          box-shadow: 0px 0px 14px 2px rgba(0, 0, 0, 0.2);
+        }
+      }
+
+
+    }
+    &-count {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      column-gap: 12px;
+      margin-top: 46px;
+      & input {
+        width: 100%;
+        max-width: 508px;
+        height: 81px;
+        background: linear-gradient(180deg, #FFFFFF 0%, #EAEDFA 100%);
+        border: 1px solid #EAEDFA;
+        border-radius: 10px;
+        font-family: Fredoka One;
+        font-size: 48px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 58px;
+        letter-spacing: 0em;
+        text-align: center;
+        color: #4D4D4D;
+        outline: none;
+        &::-webkit-outer-spin-button,
+        &::-webkit-inner-spin-button {
+          -webkit-appearance: none;
+          margin: 0;
+        }
+      }
+      & select {
+        height: 81px;
+        width: 160px;
+        border: 1px solid #EAEDFA;
+        border-radius: 10px;
+        font-family: Fredoka One;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 22px;
+        letter-spacing: 0em;
+        color: #4D4D4D;
+        outline: none;
+        appearance: none;
+        text-align: left;
+        background-image: url('../../resources/img/Group2.png'), linear-gradient(180deg, #FFFFFF 0%, #EAEDFA 100%);
+        background-repeat: no-repeat, repeat;
+        background-position: right 22px top 50%;
+        padding-left: 40px;
+        cursor: pointer;
+        text-transform: uppercase;
+      }
+    }
+
+    &-cards {
+      margin-top: 46px;
+      & img {
+        max-width: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 615px) {
+  .depositPage {
+    &-container {
+      &-count {
+        & select {
+          background-position: right 10px top 50%;
+          padding-left: 10px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,303 @@
+{
+  "bonus": [
+    {
+      "id": 1,
+      "bonus": "FREE SPINS"
+    },
+    {
+      "id": 2,
+      "bonus": "CASHBACK"
+    },
+    {
+      "id": 3,
+      "bonus": "€100 CASINO BONUS"
+    },
+    {
+      "id": 4,
+      "bonus": "CRAZY BONUS 400% CASINO BONUS"
+    },
+    {
+      "id": 5,
+      "bonus": "TOURNAMENT €2000 CASH EVRY WEEK"
+    },
+    {
+      "id": 6,
+      "bonus": "DEPOSIT €20 & GET 100 FREE SPINS"
+    },
+    {
+      "id": 7,
+      "bonus": "HIGHROLLER BONUS 100% BONUS UP TO €500"
+    },
+    {
+      "id": 8,
+      "bonus": "200% CASINO BONUS UP TO €100"
+    },
+    {
+      "id": 9,
+      "bonus": "400% CASINO BONUS"
+    }
+  ],
+  "questions": {
+    "STEP_QUESTION_1": [
+      {
+        "id": 11,
+        "result": "Slots",
+        "value": false
+      },
+      {
+        "id": 12,
+        "result": "Baccarat",
+        "value": false
+      },
+      {
+        "id": 13,
+        "result": "Blackjack",
+        "value": true
+      },
+      {
+        "id": 14,
+        "result": "Roulette",
+        "value": false
+      }
+    ],
+    "STEP_QUESTION_2": [
+      {
+        "id": 16,
+        "result": "A or 10 for the dealer",
+        "value": false
+      },
+      {
+        "id": 17,
+        "result": "if u have couple of 8's",
+        "value": false
+      },
+      {
+        "id": 18,
+        "result": "don't have any exceptions",
+        "value": true
+      }
+    ]
+  },
+  "games": {
+    "STEP_GAME_1": [
+      {
+        "id": 19,
+        "img": "https://s1.hostingkartinok.com/uploads/thumbs/2022/01/d8df79240cf8e1fef020051579756998.png",
+        "active": false
+      },
+      {
+        "id": 20,
+        "img": "https://s1.hostingkartinok.com/uploads/thumbs/2022/01/a74e71d39d855532531bdcccd6423548.png",
+        "active": false
+      },
+      {
+        "id": 21,
+        "img": "https://s1.hostingkartinok.com/uploads/thumbs/2022/01/4063f1a254e70eb3ff1ac41da736ac1c.png",
+        "active": false
+      },
+      {
+        "id": 22,
+        "img": "https://s1.hostingkartinok.com/uploads/thumbs/2022/01/d8df79240cf8e1fef020051579756998.png",
+        "active": false
+      },
+      {
+        "id": 23,
+        "img": "https://s1.hostingkartinok.com/uploads/thumbs/2022/01/a74e71d39d855532531bdcccd6423548.png",
+        "active": false
+      },
+      {
+        "id": 24,
+        "img": "https://s1.hostingkartinok.com/uploads/thumbs/2022/01/4063f1a254e70eb3ff1ac41da736ac1c.png",
+        "active": false
+      },
+      {
+        "id": 25,
+        "img": "https://s1.hostingkartinok.com/uploads/thumbs/2022/01/52917e87806e707e89c449177112fd42.png",
+        "active": false
+      },
+      {
+        "id": 26,
+        "img": "https://s1.hostingkartinok.com/uploads/thumbs/2022/01/6724e81b272bd43094432cabee1bf946.png",
+        "active": false
+      },
+      {
+        "id": 27,
+        "img": "https://s1.hostingkartinok.com/uploads/thumbs/2022/01/937b92a6598efbfe5a10053f91dff8e2.png",
+        "active": false
+      },
+      {
+        "id": 28,
+        "img": "https://s1.hostingkartinok.com/uploads/thumbs/2022/01/52917e87806e707e89c449177112fd42.png",
+        "active": false
+      },
+      {
+        "id": 29,
+        "img": "https://s1.hostingkartinok.com/uploads/thumbs/2022/01/6724e81b272bd43094432cabee1bf946.png",
+        "active": true
+      },
+      {
+        "id": 30,
+        "img": "https://s1.hostingkartinok.com/uploads/thumbs/2022/01/937b92a6598efbfe5a10053f91dff8e2.png",
+        "active": false
+      },
+      {
+        "id": 31,
+        "img": "https://s1.hostingkartinok.com/uploads/thumbs/2022/01/40fb1ada817fa1e83e9cc1957e523cf6.png",
+        "active": false
+      },
+      {
+        "id": 32,
+        "img": "https://s1.hostingkartinok.com/uploads/thumbs/2022/01/7626e8b68ba3b5f9eecf2459afb6a10d.png",
+        "active": false
+      },
+      {
+        "id": 33,
+        "img": "https://s1.hostingkartinok.com/uploads/thumbs/2022/01/3d91218a485f3216cb42bd3cb9ef273a.png",
+        "active": true
+      },
+      {
+        "id": 34,
+        "img": "https://s1.hostingkartinok.com/uploads/thumbs/2022/01/40fb1ada817fa1e83e9cc1957e523cf6.png",
+        "active": false
+      },
+      {
+        "id": 35,
+        "img": "https://s1.hostingkartinok.com/uploads/thumbs/2022/01/7626e8b68ba3b5f9eecf2459afb6a10d.png",
+        "active": false
+      },
+      {
+        "id": 36,
+        "img": "https://s1.hostingkartinok.com/uploads/thumbs/2022/01/3d91218a485f3216cb42bd3cb9ef273a.png",
+        "active": true
+      }
+    ],
+    "STEP_GAME_2": [
+      {
+        "id": 37,
+        "img": "https://s1.hostingkartinok.com/uploads/images/2022/01/c0e8812ed7461bb3a1fa667dd6d1b062.png",
+        "active": false
+      },
+      {
+        "id": 38,
+        "img": "https://s1.hostingkartinok.com/uploads/thumbs/2022/01/5d8b9796c78a8a6723cdd6333fc309ae.png",
+        "active": false
+      },
+      {
+        "id": 39,
+        "img": "https://s1.hostingkartinok.com/uploads/thumbs/2022/01/8e6269dafd418a6dd3515ec13307da0c.png",
+        "active": false
+      },
+      {
+        "id": 40,
+        "img": "https://s1.hostingkartinok.com/uploads/images/2022/01/c0e8812ed7461bb3a1fa667dd6d1b062.png",
+        "active": false
+      },
+      {
+        "id": 41,
+        "img": "https://s1.hostingkartinok.com/uploads/thumbs/2022/01/5d8b9796c78a8a6723cdd6333fc309ae.png",
+        "active": false
+      },
+      {
+        "id": 42,
+        "img": "https://s1.hostingkartinok.com/uploads/thumbs/2022/01/8e6269dafd418a6dd3515ec13307da0c.png",
+        "active": false
+      },
+      {
+        "id": 43,
+        "img": "https://s1.hostingkartinok.com/uploads/thumbs/2022/01/3b2f28a9814e4c26ad4cfb1b2005f34f.png",
+        "active": false
+      },
+      {
+        "id": 44,
+        "img": "https://s1.hostingkartinok.com/uploads/thumbs/2022/01/f10c584629de9704a351c66484d12f36.png",
+        "active": false
+      },
+      {
+        "id": 45,
+        "img": "https://s1.hostingkartinok.com/uploads/thumbs/2022/01/bb87eedca73537e58f796aada3617bce.png",
+        "active": false
+      },
+      {
+        "id": 46,
+        "img": "https://s1.hostingkartinok.com/uploads/thumbs/2022/01/3b2f28a9814e4c26ad4cfb1b2005f34f.png",
+        "active": false
+      },
+      {
+        "id": 47,
+        "img": "https://s1.hostingkartinok.com/uploads/thumbs/2022/01/f10c584629de9704a351c66484d12f36.png",
+        "active": true
+      },
+      {
+        "id": 48,
+        "img": "https://s1.hostingkartinok.com/uploads/thumbs/2022/01/bb87eedca73537e58f796aada3617bce.png",
+        "active": false
+      },
+      {
+        "id": 49,
+        "img": "https://s1.hostingkartinok.com/uploads/thumbs/2022/01/f17ec074fdf892b02d49630e41faab76.png",
+        "active": false
+      },
+      {
+        "id": 50,
+        "img": "https://s1.hostingkartinok.com/uploads/thumbs/2022/01/bbe6eca6fea407c305dbc3d59f8e43b9.png",
+        "active": false
+      },
+      {
+        "id": 51,
+        "img": "https://s1.hostingkartinok.com/uploads/images/2022/01/c0e8812ed7461bb3a1fa667dd6d1b062.png",
+        "active": true
+      },
+      {
+        "id": 52,
+        "img": "https://s1.hostingkartinok.com/uploads/thumbs/2022/01/f17ec074fdf892b02d49630e41faab76.png",
+        "active": false
+      },
+      {
+        "id": 53,
+        "img": "https://s1.hostingkartinok.com/uploads/thumbs/2022/01/bbe6eca6fea407c305dbc3d59f8e43b9.png",
+        "active": false
+      },
+      {
+        "id": 54,
+        "img": "https://s1.hostingkartinok.com/uploads/images/2022/01/c0e8812ed7461bb3a1fa667dd6d1b062.png",
+        "active": true
+      }
+    ]
+  },
+  "translations": {
+    "TITLE_START": "pick any category, complete quiz & earn casino prize",
+    "TITLE_STEP_1": "pick up your favorite providers & games",
+    "TITLE_STEP_2": "Which casino game offers you the best statistical chance of winning?",
+    "TITLE_STEP_3": "What kind of bonus do u prefer?",
+    "TITLE_STEP_4": "In Blackjack basic strategy, what is the exception for double down on 11?",
+    "TITLE_STEP_5": "Please, set up your preferred betting range",
+    "TITLE_END": "CONGRATS!",
+
+    "INFO_START": "Complete short QUIZ to test your casino knowledge and you’ll be rewarded with a special Bonus.",
+    "INFO_STEP_1_1": "Please select at least 3 game providers & earn (5 free spins)",
+    "INFO_STEP_1_2": "Please select at least 3 casino games & earn (5 free spins)",
+    "INFO_STEP_TEST": "Select the answer to earn (10 Free Spins)",
+    "INFO_STEP_3": "Please select at least 3 casino bonuses & earn (10 free spins)",
+    "INFO_STEP_5": "Set up deposit limit per month to earn (10 Free Spins)",
+
+    "BTN_START": "start",
+    "BTN_PiCK_UP": "pick up games",
+    "BTN_NEXT": "next",
+    "BTN_SET": "Set",
+    "BTN_FINISH": "EARN NOW"
+  },
+  "currency": [
+    {
+      "id": 70,
+      "value": "usd"
+    },
+    {
+      "id": 71,
+      "value": "eur"
+    },
+    {
+      "id": 72,
+      "value": "rub"
+    }
+  ]
+}

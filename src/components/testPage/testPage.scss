@@ -1,0 +1,12 @@
+.testPage {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .testPage-wrap {
+    width: 100%;
+    max-width: 398px;
+    margin-top: 5px;
+  }
+}
+

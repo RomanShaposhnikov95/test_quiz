@@ -1,0 +1,21 @@
+.header {
+  margin-top: 46px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (max-width: 614px) {
+    margin-top: 32px;
+    & img {
+      max-width: 189px;
+      max-height: 62px;
+    }
+  }
+
+  @media (max-width: 405px) {
+    margin-top: 20px;
+    & img {
+      max-width: 170px;
+    }
+  }
+}
