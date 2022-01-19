@@ -8,7 +8,6 @@ import {StepsEnum} from "./redux/GameEnum";
 import {StepGame1} from "./components/StepGame1/StepGame1";
 import {useSelector} from "react-redux";
 import {StepQuiz} from "./components/StepQuiz/StepQuiz";
-import {ServerError} from "./components/serverError/serverError";
 
 
 
