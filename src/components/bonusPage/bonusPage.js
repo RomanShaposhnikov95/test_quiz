@@ -8,12 +8,13 @@ import {useEffect} from "react";
 import {Preloader} from "../Preloader/Preloader";
 import {StepsEnum} from "../../redux/GameEnum";
 import {motion} from "framer-motion";
+import {ServerError} from "../serverError/serverError";
 
 
 
 export const BonusPage = () => {
     const dispatch = useDispatch();
-    const {bonus, activeBonus} = useSelector(state => state.bonus);
+    const {bonus, activeBonus, bonusLoadingStatus} = useSelector(state => state.bonus);
     const { translation } = useSelector(state => state.translation);
     const { TITLE_STEP_3, INFO_STEP_3, BTN_NEXT } = translation
 
@@ -29,6 +30,20 @@ export const BonusPage = () => {
         }
     }
 
+    const renderBonus = () => {
+        if(bonusLoadingStatus === 'error') {
+            return <ServerError/>
+        }
+        return bonus && bonus.length > 0 ? bonus.map(el => (
+                <div onClick={() => addBonusHandler(el)}
+                     key={el.id}
+                     className={`bonusPage-container-item ${activeBonus.includes(el) ? 'activeBonus' : null}`}>
+                    {el.bonus}
+                </div>
+            )) :
+            <Preloader/>
+    }
+
     return (
         <motion.div initial={{scale: 0}} animate={{scale: 1}} transition={{delay: 0.3}}>
             <div className="bonusPage">
@@ -36,14 +51,7 @@ export const BonusPage = () => {
                 <Title title={TITLE_STEP_3}/>
                 <div className="bonusPage-container">
                     {
-                        bonus && bonus.length > 0 ? bonus.map(el => (
-                                <div onClick={() => addBonusHandler(el)}
-                                     key={el.id}
-                                     className={`bonusPage-container-item ${activeBonus.includes(el) ? 'activeBonus' : null}`}>
-                                    {el.bonus}
-                                </div>
-                            )) :
-                            <Preloader/>
+                        renderBonus()
                     }
                 </div>
                 <BottomHint

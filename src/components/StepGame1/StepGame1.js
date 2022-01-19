@@ -3,13 +3,14 @@ import {useDispatch, useSelector} from "react-redux";
 import {StepsEnum} from "../../redux/GameEnum";
 import {useEffect} from "react";
 import {fetchGames} from "../../redux/gamesSlice";
+import {ServerError} from "../serverError/serverError";
 
 
 
 export const StepGame1 = () => {
     const { translation } = useSelector(state => state.translation);
     const { currentStep } = useSelector(state => state.data);
-    const { games} = useSelector(state => state.games)
+    const { games , gamesLoadingStatus } = useSelector(state => state.games)
     const { TITLE_STEP_1, INFO_STEP_1_1, INFO_STEP_1_2, BTN_PiCK_UP, BTN_NEXT } = translation;
     const { STEP_GAME_1, STEP_GAME_2}  = games
     const dispatch = useDispatch();
@@ -18,7 +19,14 @@ export const StepGame1 = () => {
         dispatch(fetchGames())
     },[])
 
+
+
     const getGamesParam = () => {
+        if(gamesLoadingStatus === "error")  {
+            return {
+                error: <ServerError/>
+            }
+        }
         if(currentStep === StepsEnum.STEP_GAME_1) {
             return {
                 title: TITLE_STEP_1,

@@ -19,12 +19,12 @@ const translationSlice = createSlice({
         translationsLoadingStatus: 'null',
     },
     extraReducers: {
-        [fetchTranslations.pending]: (state) => {state.translationLoadingStatus = 'loading'},
+        [fetchTranslations.pending]: (state) => {state.translationsLoadingStatus = 'loading'},
         [fetchTranslations.fulfilled]: (state,action) => {
-            state.translationLoadingStatus = 'null';
+            state.translationsLoadingStatus = 'null';
             state.translation = action.payload;
         },
-        [fetchTranslations.rejected]: (state) => {state.translationLoadingStatus = 'error'}
+        [fetchTranslations.rejected]: (state) => {state.translationsLoadingStatus = 'error'}
     }
 })
 

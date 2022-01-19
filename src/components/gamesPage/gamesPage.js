@@ -10,7 +10,7 @@ import {motion} from "framer-motion";
 
 
 export const GamesPage = ({translation}) => {
-    const { title, text, btn, stepsEnum, games } = translation;
+    const { title, text, btn, stepsEnum, games , error} = translation;
     const activeGames = useSelector(state => state.games.activeGames)
     const dispatch = useDispatch();
 
@@ -22,10 +22,29 @@ export const GamesPage = ({translation}) => {
         }
     }
 
+    const renderGames = () => {
+        if(error) {
+            return error
+        }
+
+        return games && games.length > 0 ? games.map(el => (
+            <div key={el.id}
+                 onClick={() => addGameHandler(el)}
+                 className='gamesPage-wrapper-wrap'
+            >
+                <div className={`gamesPage-wrapper-wrap-item ${activeGames.includes(el) ? 'active' : null}`}>
+                    <img src={el.img} alt=""/>
+                </div>
+            </div>
+        )) : <Preloader/>
+
+    }
+
     return (
 
         <motion.div initial={{scale: 0}} animate={{scale: 1}} transition={{delay: 0.3}}>
             <div className="gamesPage">
+
                 <ProgressBar/>
                 <Title title={title}/>
                 <div className="gamesPage-promo">
@@ -33,16 +52,7 @@ export const GamesPage = ({translation}) => {
                 </div>
                 <div className="gamesPage-wrapper">
                     {
-                        games && games.length > 0 ? games.map(el => (
-                            <div key={el.id}
-                                 onClick={() => addGameHandler(el)}
-                                 className='gamesPage-wrapper-wrap'
-                            >
-                                <div className={`gamesPage-wrapper-wrap-item ${activeGames.includes(el) ? 'active' : null}`}>
-                                    <img src={el.img} alt=""/>
-                                </div>
-                            </div>
-                        )) : <Preloader/>
+                        renderGames()
                     }
                 </div>
                 <BottomHint

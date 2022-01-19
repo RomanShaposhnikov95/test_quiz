@@ -12,10 +12,14 @@
     flex-direction: column;
     align-items: center;
     padding-bottom: 151px ;
+    position: relative;
 }
+
 
 @media (max-width: 615px) {
     .container {
         padding: 0 30px 122px 30px;
     }
 }
+
+

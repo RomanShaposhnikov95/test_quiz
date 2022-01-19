@@ -10,7 +10,7 @@ import {Preloader} from "../Preloader/Preloader";
 
 
 export const TestPage = ({translation}) => {
-    const {title, text, btn, stepsEnum, quiz} = translation
+    const {title, text, btn, stepsEnum, quiz, errorServer} = translation
     const error = useSelector(state => state.data.error)
     const [current, setCurrent] = useState(null)
 
@@ -28,22 +28,29 @@ export const TestPage = ({translation}) => {
         return 'That’s not it, try again!'
     }
 
+    const renderQuiz = () => {
+        if(errorServer)  {
+           return errorServer
+        }
+        return  quiz && quiz.length > 0 ? quiz.map(el =>
+                <TestItem
+                    key={el.id}
+                    current={current}
+                    setCurrent={setCurrent}
+                    error={error}
+                    {...el}
+                />
+            ) :
+            <Preloader/>
+    }
+
     return (
         <div className="testPage">
             <ProgressBar/>
             <Title title={title}/>
             <div className="testPage-wrap">
                 {
-                    quiz && quiz.length > 0 ? quiz.map(el =>
-                        <TestItem
-                            key={el.id}
-                            current={current}
-                            setCurrent={setCurrent}
-                            error={error}
-                            {...el}
-                        />
-                    ) :
-                        <Preloader/>
+                    renderQuiz()
                 }
             </div>
             <BottomHint

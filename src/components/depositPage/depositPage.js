@@ -8,12 +8,14 @@ import {StepsEnum} from "../../redux/GameEnum";
 import {useDispatch, useSelector} from "react-redux";
 import {fetchData} from "../../redux/dataSlice";
 import {motion} from "framer-motion";
+import {ServerError} from "../serverError/serverError";
+import {Preloader} from "../Preloader/Preloader";
 
 
 
 export const DepositPage = () => {
     const { translation } = useSelector(state => state.translation);
-    const {currency} = useSelector(state => state.data)
+    const { currency, dataLoadingStatus } = useSelector(state => state.data)
     const { TITLE_STEP_5, INFO_STEP_5, BTN_SET} = translation;
     const [count, setCount] = useState(0);
     const dispatch = useDispatch();
@@ -27,11 +29,22 @@ export const DepositPage = () => {
     }
 
     const changeCurrency = () => {
-        if(currency && currency.length > 0) {
-            return currency.map(el => (
-               <option key={el.id}>{el.value}</option>
-            ))
+        if(dataLoadingStatus === "error") {
+            return <ServerError/>
         }
+        if(dataLoadingStatus === "loading") {
+            return <Preloader/>
+        }
+
+
+        return <select>
+            {
+                currency.map(el => (
+                <option key={el.id}>{el.value}</option>
+                ))
+            }
+        </select>
+
     }
 
 
@@ -54,11 +67,9 @@ export const DepositPage = () => {
                     </div>
                     <div className="depositPage-container-count">
                         <input value={count} onChange={(e) => onChangeHandler(e)} type="number" min="0" max="100"/>
-                        <select>
-                            {
-                                changeCurrency()
-                            }
-                        </select>
+                        {
+                            changeCurrency()
+                        }
                     </div>
                     <div className="depositPage-container-cards">
                         <img src={cards} alt=""/>

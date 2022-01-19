@@ -1,0 +1,16 @@
+.server-error {
+  width: 100%;
+  height: 75px;
+  max-width: 300px;
+  background: mediumpurple;
+  border: 1px solid white;
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  font-family: Fredoka One;
+  text-transform: uppercase;
+  position: absolute;
+  top: 50px;
+}

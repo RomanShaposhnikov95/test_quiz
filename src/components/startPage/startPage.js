@@ -9,12 +9,13 @@ import {Preloader} from "../Preloader/Preloader";
 import {clearAllGames} from "../../redux/gamesSlice";
 import {clearAllBonus} from "../../redux/bonusSlice";
 import {motion} from "framer-motion";
+import {ServerError} from "../serverError/serverError";
 
 
 
 export const StartPage = () => {
-    const {startPage} = useSelector(state => state.startPage)
-    const { translation} = useSelector(state => state.translation);
+    const { startPage } = useSelector(state => state.startPage)
+    const { translation, translationsLoadingStatus } = useSelector(state => state.translation);
     const { TITLE_START, INFO_START, BTN_START } = translation
     const dispatch = useDispatch();
 
@@ -24,6 +25,23 @@ export const StartPage = () => {
         dispatch(clearAllBonus())
     },[])
 
+    const renderStartPage= () => {
+        if (translationsLoadingStatus === "error") {
+            return <ServerError/>
+        }
+        return  startPage && startPage.length > 0 ?
+            startPage.map((el,index) => (
+                <div key={index} className={`startPage-container-item ${startPage[startPage.length-1] === el ? 'yellow': null}`}>
+                    <div className="startPage-container-item-wrapper">
+                        <img src={el.img} alt=""/>
+                        <div className="startPage-container-item-wrapper-title">
+                            {el.title}
+                        </div>
+                    </div>
+                </div>
+            )) : <Preloader/>
+    }
+
     return (
         <motion.div initial={{scale: 0}} animate={{scale: 1}} transition={{delay: 0.3}}>
             <div className="startPage">
@@ -32,17 +50,7 @@ export const StartPage = () => {
                 </div>
                 <div className="startPage-container">
                     {
-                        startPage && startPage.length > 0 ?
-                            startPage.map((el,index) => (
-                                <div key={index} className={`startPage-container-item ${startPage[startPage.length-1] === el ? 'yellow': null}`}>
-                                    <div className="startPage-container-item-wrapper">
-                                        <img src={el.img} alt=""/>
-                                        <div className="startPage-container-item-wrapper-title">
-                                            {el.title}
-                                        </div>
-                                    </div>
-                                </div>
-                            )) : <Preloader/>
+                        renderStartPage()
                     }
                 </div>
                 <div className="startPage-bottom">

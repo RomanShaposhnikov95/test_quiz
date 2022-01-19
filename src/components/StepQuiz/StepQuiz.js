@@ -5,12 +5,13 @@ import {useEffect} from "react";
 import {fetchTest} from "../../redux/testSlice";
 import {StartPage} from "../startPage/startPage";
 import {motion} from "framer-motion";
+import {ServerError} from "../serverError/serverError";
 
 
 export const StepQuiz = () => {
     const { translation } = useSelector(state => state.translation);
     const { currentStep } = useSelector(state => state.data);
-    const { questions } = useSelector(state => state.test)
+    const { questions, testLoadingStatus } = useSelector(state => state.test)
     const { TITLE_STEP_2, TITLE_STEP_4, BTN_NEXT, INFO_STEP_TEST } = translation;
     const { STEP_QUESTION_1, STEP_QUESTION_2 } = questions
     const dispatch = useDispatch();
@@ -21,6 +22,11 @@ export const StepQuiz = () => {
     },[])
 
     const getQuizParam = () => {
+        if(testLoadingStatus === "error")  {
+            return {
+                errorServer: <ServerError/>
+            }
+        }
         if(currentStep === StepsEnum.STEP_QUIZ_1) {
             return {
                 title: TITLE_STEP_2,
